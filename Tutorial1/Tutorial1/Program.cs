@@ -1,7 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-for(int i = 0; i < 10; i++)
+static double GetAverage(int[] arr)
 {
-    Console.WriteLine("test " + i*i*i);
+    double sum = 0;
+    for(int i  = 0; i < arr.Length; i++)
+    {
+        sum += arr[i];
+    }
+    return sum / arr.Length;
 }
+
+int[] arr = { 1, 2, 3, 4, 5, 6 };
+Console.WriteLine(GetAverage(arr));
